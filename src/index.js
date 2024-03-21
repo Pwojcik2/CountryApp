@@ -1,15 +1,16 @@
 let searchBtn = document.getElementById("search-btn");
 let countryInp = document.getElementById("country-inp");
 
+
 function formatPopulation(population) {
-    if (population >= 1e9) {
-      return (population / 1e9).toFixed(2) + " billion";
-    } else if (population >= 1e6) {
-      return (population / 1e6).toFixed(2) + " million";
-    } else {
-      return population.toLocaleString();
-    }
+  if (population >= 1e9) {
+    return (population / 1e9).toFixed(2) + " billion";
+  } else if (population >= 1e6) {
+    return (population / 1e6).toFixed(2) + " million";
+  } else {
+    return population.toLocaleString();
   }
+}
   
   searchBtn.addEventListener("click", () => {
     let countryName = countryInp.value;
